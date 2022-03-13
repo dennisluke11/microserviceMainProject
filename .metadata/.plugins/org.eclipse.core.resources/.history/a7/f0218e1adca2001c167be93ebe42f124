@@ -1,0 +1,36 @@
+
+spring: 
+  application:
+     name : student-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/service
+    username : ${datasource.username}
+    password : ${datasource.password}
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa: 
+    properties:
+      hibernate:
+        dialect: ${datasource.dialect}
+        connection: 
+          characterEncoding: UTF-8
+          CharSet: UTF-8
+          useUnicode: true
+    show-sql: true 
+    hibernate:
+      ddl-auto: none   
+      
+  config:
+   import: optional:configserver:http://localhost:8086 
+   
+  profiles:
+    active: dev
+server:
+ port : 8083
+ 
+
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8084/eureka

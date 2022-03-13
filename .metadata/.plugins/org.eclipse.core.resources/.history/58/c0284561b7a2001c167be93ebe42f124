@@ -1,0 +1,10 @@
+#mysql database configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/service
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.database-platform = org.hibernate.dialect.MySQL5Dialect
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.hibernate.name.physical-strategy = org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+message=message from student-service from development prod

@@ -1,0 +1,4 @@
+server.port=8888
+spring.config.use-legacy-processing=true
+spring.cloud.config.server.git.uri=file:///C:/Users/denni/OneDrive/Documents/config
+spring.cloud.config.server.git.clone-on-start=true

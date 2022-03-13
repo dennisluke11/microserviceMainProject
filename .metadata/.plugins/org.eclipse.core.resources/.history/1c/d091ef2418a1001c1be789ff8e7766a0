@@ -1,0 +1,28 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.demo.Course;
+import org.springframework.cloud.client.circuitbreaker
+
+
+@Service
+public class ApiCall {
+	
+	@Autowired RestTemplate restTemplate;
+	
+	private static final String courseMisroserviceBaseURL = 
+			"http://course-service";
+	
+	@CircuitBreaker(name = "example", fallbackMethod="fallback")
+	public Course getCourseDetails(int courseId) {
+	
+	Course course = restTemplate.getForObject(
+			courseMisroserviceBaseURL + "/course/course?id={courseId}", 
+			Course.class, courseId);
+	return course;
+	}
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;config-local&apos;" deleteContents="true" description="Delete resource &apos;config-local&apos;" element1="/config-local" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1637095476219"/>
+</session>

@@ -1,0 +1,22 @@
+
+spring: 
+  application:
+     name : student-service
+
+  datasource: 
+    url : ${datasource.url}
+    username : ${datasource.username}
+    password : ${datasource.password}
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+   properties:
+    hibernate:
+      current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext 
+      namingStrategy: org.hibernate.cfg.DefaultNamingStrategy
+server:
+ port : 8083
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8084/eureka

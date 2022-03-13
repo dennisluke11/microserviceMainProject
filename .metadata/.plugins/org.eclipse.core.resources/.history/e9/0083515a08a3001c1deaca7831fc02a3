@@ -1,0 +1,8 @@
+#mysql database configuration
+app.datasource.jdbc-url=jdbc:mysql://localhost:3306/service?useSSL=false
+
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.dialect=org.hibernate.dialect.MySQL5Dialect
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+message=message from student-service from development env
